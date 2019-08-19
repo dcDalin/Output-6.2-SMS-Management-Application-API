@@ -1,7 +1,7 @@
-const resolvers = {
+import contacts from './contacts';
+
+export default {
   Query: {
-    hello: () => 'Hello world',
+    ...contacts.Query,
   },
 };
-
-export default resolvers;
