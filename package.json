@@ -1,0 +1,27 @@
+{
+  "name": "output-6.2-sms-management-application-api",
+  "version": "1.0.0",
+  "description": "Output 6.2: SMS Management Application API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcDalin/Output-6.2-SMS-Management-Application-API.git"
+  },
+  "author": "mcdalinoluoch@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcDalin/Output-6.2-SMS-Management-Application-API/issues"
+  },
+  "homepage": "https://github.com/dcDalin/Output-6.2-SMS-Management-Application-API#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "nodemon": "^1.19.1"
+  }
+}
