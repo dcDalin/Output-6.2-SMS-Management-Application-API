@@ -6,7 +6,8 @@ const contactSchema = new Schema(
     phoneNumber: String,
     password: String,
     role: {
-      type: [{ type: String, enum: ['Admin', 'User'] }],
+      type: String,
+      enum: ['Admin', 'User'],
       default: 'User',
     },
   },
@@ -15,4 +16,13 @@ const contactSchema = new Schema(
   },
 );
 
-export default model('Contact', contactSchema);
+const Contact = model('Contact', contactSchema);
+
+Contact.create({
+  name: 'Administrator',
+  phoneNumber: '0712345678',
+  password: 'Password',
+  role: 'Admin',
+});
+
+export default Contact;

@@ -18,7 +18,7 @@ export default {
       if (contact.phoneNumber === phoneNumber) {
         throw new UserInputError('You can not send an SMS to yourself', {
           errors: {
-            username: 'You can not send an SMS to yoursel',
+            name: 'You can not send an SMS to yourself',
           },
         });
       }
@@ -34,6 +34,8 @@ export default {
       const newSms = new SMS({
         phoneNumber,
         message,
+        from: contact.name,
+        to: contactPhone.name,
         me: contact.id,
         status,
       });

@@ -8,6 +8,7 @@ const generateToken = contact => jwt.sign(
     id: contact.id,
     name: contact.name,
     phoneNumber: contact.phoneNumber,
+    role: contact.role,
   },
   ENV_VAR.APP_SECRET,
   { expiresIn: '1h' },
