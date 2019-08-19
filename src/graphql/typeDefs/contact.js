@@ -7,6 +7,7 @@ export default gql`
 
   extend type Mutation {
     contactSignUp(contactSignUpInput: ContactSignUpInput): Contact!
+    contactLogin(phoneNumber: String!, password: String!): Contact!
   }
 
   type Contact {
