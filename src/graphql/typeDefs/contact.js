@@ -9,6 +9,7 @@ export default gql`
   extend type Mutation {
     contactSignUp(contactSignUpInput: ContactSignUpInput): Contact!
     contactLogin(phoneNumber: String!, password: String!): Contact!
+    sendSms(phoneNumber: String!, message: String!): SMS!
   }
 
   type Contact {
@@ -16,6 +17,13 @@ export default gql`
     name: String!
     phoneNumber: String!
     token: String
+  }
+
+  type SMS {
+    id: ID!
+    phoneNumber: String!
+    message: String!
+    status: String!
   }
 
   input ContactSignUpInput {
