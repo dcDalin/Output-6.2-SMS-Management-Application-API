@@ -1,4 +1,4 @@
 import root from './root';
-import user from './user';
+import contact from './contact';
 
-export default [root, user];
+export default [root, contact];
