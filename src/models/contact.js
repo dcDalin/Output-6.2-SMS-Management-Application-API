@@ -5,6 +5,10 @@ const contactSchema = new Schema(
     name: String,
     phoneNumber: String,
     password: String,
+    role: {
+      type: [{ type: String, enum: ['Admin', 'User'] }],
+      default: 'User',
+    },
   },
   {
     timestamps: true,
