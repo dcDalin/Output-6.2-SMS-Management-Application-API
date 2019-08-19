@@ -1,7 +1,3 @@
-import contacts from './contacts';
+import contact from './contact';
 
-export default {
-  Query: {
-    ...contacts.Query,
-  },
-};
+export default [contact];

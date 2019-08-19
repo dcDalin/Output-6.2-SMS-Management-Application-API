@@ -5,10 +5,21 @@ export default gql`
     contacts: [Contact]
   }
 
+  extend type Mutation {
+    contactSignUp(contactSignUpInput: ContactSignUpInput): Contact!
+  }
+
   type Contact {
     id: ID!
     name: String!
     phoneNumber: String!
     token: String
+  }
+
+  input ContactSignUpInput {
+    name: String!
+    phoneNumber: String!
+    password: String!
+    confirmPassword: String!
   }
 `;
