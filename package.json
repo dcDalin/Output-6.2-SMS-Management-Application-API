@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "nodemon --exec babel-node bin/dev",
     "lint": "eslint 'src/**/*.js' --fix",
     "format": "prettier-eslint 'server/**/*.{js,json}' --write"
   },
@@ -49,6 +49,7 @@
     "apollo-server-express": "^2.8.1",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
-    "graphql": "^14.4.2"
+    "graphql": "^14.4.2",
+    "mongoose": "^5.6.9"
   }
 }
