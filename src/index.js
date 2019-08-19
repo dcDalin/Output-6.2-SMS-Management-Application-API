@@ -15,7 +15,7 @@ const PORT = process.env.PORT || ENV_VAR.APP_PORT;
 
     app.disable('x-powered-by');
 
-    const server = new ApolloServer({ typeDefs, resolvers });
+    const server = new ApolloServer({ typeDefs, resolvers, context: ({ req }) => ({ req }) });
 
     server.applyMiddleware({ app });
 
