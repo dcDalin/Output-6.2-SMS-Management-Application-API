@@ -40,7 +40,6 @@
     "@babel/node": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
@@ -51,6 +50,7 @@
     "prettier-eslint-cli": "^5.0.0"
   },
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
     "apollo-server-express": "^2.8.1",
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.1.0",
