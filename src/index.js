@@ -15,14 +15,20 @@ const PORT = process.env.PORT || ENV_VAR.APP_PORT;
 
     app.disable('x-powered-by');
 
-    const server = new ApolloServer({ typeDefs, resolvers, context: ({ req }) => ({ req }) });
+    const server = new ApolloServer({
+      typeDefs,
+      resolvers,
+      context: ({ req }) => ({ req }),
+      introspection: true,
+      playground: true,
+    });
 
     server.applyMiddleware({ app });
 
     await mongoose.connect(ENV_VAR.MONGO_URL, { useNewUrlParser: true });
 
     // eslint-disable-next-line no-console
-    app.listen({ port: PORT }, () => console.log(`Server reqdy at http://localhost:${PORT}${server.graphqlPath}`));
+    app.listen({ port: PORT }, () => console.log(`Server ready at http://localhost:${PORT}${server.graphqlPath}`));
   } catch (err) {
     // eslint-disable-next-line no-console
     console.error(err);
